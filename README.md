@@ -1,5 +1,7 @@
-#FTC Elo Calculator
-
+FTC Elo Calculator
+==============
+This is a simple calculator designed to rank ftc teams with the Elo system
+-----------
 team_list format:
 `team_number,team_name`
 
