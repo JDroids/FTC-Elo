@@ -14,7 +14,6 @@ class Team:
         self.team_name = team_name
 
     def expected(self, teammate, opponent_1, opponent_2):
-        print(self.team_number, self.team_name, 'Expected', (1 + 10 ** (((self.ranking + teammate.ranking) - (opponent_1.ranking + opponent_2.ranking)) / 400)))
         return (((self.ranking + teammate.ranking) - (opponent_1.ranking + opponent_2.ranking)) / 400)
 
     def update_ranking(self, alliance_score: int, teammate, opponent_1, opponent_2, k=32):
