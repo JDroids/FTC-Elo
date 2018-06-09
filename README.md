@@ -8,4 +8,4 @@ team_list format:
 match_results format:
 `red_alliance_team_1,red_alliance_team_2,blue_alliance_team_1,blue_alliance_team_2,red_alliance_score,blue_alliance_score`
 
-The example values are from the 2018 Relic Recovery Season ESR
+The example values are from the 2018 Relic Recovery Season ESR Hopper Division 
