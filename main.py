@@ -20,11 +20,18 @@ with open('match_results.csv') as match_results:
         second_blue_team = teams[int(match_result[3])]
         blue_score = int(match_result[5])
 
-        first_red_team.update_ranking(red_score, second_red_team, first_blue_team, second_blue_team)
-        second_red_team.update_ranking(red_score, first_red_team, first_blue_team, second_blue_team)
+        first_red_team.update_ranking(red_score, blue_score, second_red_team, first_blue_team, second_blue_team)
+        second_red_team.update_ranking(red_score, blue_score, first_red_team, first_blue_team, second_blue_team)
 
-        first_blue_team.update_ranking(blue_score, second_blue_team, first_red_team, second_red_team)
-        second_blue_team.update_ranking(blue_score, first_blue_team, first_red_team, second_red_team)
+        first_blue_team.update_ranking(blue_score, red_score, second_blue_team, first_red_team, second_red_team)
+        second_blue_team.update_ranking(blue_score, red_score, first_blue_team, first_red_team, second_red_team)
+
+team_object_list = []
 
 for team in teams:
-    print(teams[team].team_number, teams[team].team_name, teams[team].ranking)
+    team_object_list.append(teams[team])
+
+team_object_list.sort(key=lambda team_object: team_object.ranking, reverse=True)
+
+for index,team in enumerate(team_object_list):
+    print('{}.'.format(index + 1), team.team_number, team.team_name, team.ranking)
